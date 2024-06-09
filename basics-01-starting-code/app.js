@@ -14,6 +14,7 @@ const app = Vue.createApp ({
         outputGoal() {
             const randomNumber = Math.random();
             if (randomNumber < 0.5) {
+                //this - data 객체 전체.
                 return this.courseGoalA;
             } else {
                 return this.courseGoalB;
