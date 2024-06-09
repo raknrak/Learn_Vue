@@ -3,7 +3,8 @@ const app = Vue.createApp ({
     data() {
         // 항상 객체(object)를 반환함 - 배열x, 숫자 x, 문자열 x
         return {
-            courseGoal: 'Finish the course and learn vue!'
+            courseGoal: 'Finish the course and learn vue!',
+            vueLink: 'https://vuejs.org/'
         };
         
     }
