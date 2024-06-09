@@ -7,6 +7,17 @@ const app = Vue.createApp ({
             vueLink: 'https://vuejs.org/'
         };
         
+    },
+    // 메서드 및 함수로 만들어진 객체를 가짐
+    methods: {
+        outputGoal() {
+            const randomNumber = Math.random();
+            if (randomNumber < 0.5) {
+                return 'Learn Vue!';
+            } else {
+                return 'Master Vue!'
+            }
+        }
     }
 });
 
