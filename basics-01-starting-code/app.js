@@ -3,7 +3,8 @@ const app = Vue.createApp ({
     data() {
         // 항상 객체(object)를 반환함 - 배열x, 숫자 x, 문자열 x
         return {
-            courseGoal: 'Finish the course and learn vue!',
+            courseGoalA: 'Finish the course and learn vue!',
+            courseGoalB: 'Master Vue and build amazing apps!!',
             vueLink: 'https://vuejs.org/'
         };
         
@@ -13,9 +14,9 @@ const app = Vue.createApp ({
         outputGoal() {
             const randomNumber = Math.random();
             if (randomNumber < 0.5) {
-                return 'Learn Vue!';
+                return this.courseGoalA;
             } else {
-                return 'Master Vue!'
+                return this.courseGoalB;
             }
         }
     }
