@@ -1,10 +1,16 @@
 const app = Vue.createApp({
   data() {
-    return {
+    return {      
       counter: 0,
+      name: ''
     };
   },
   methods: {
+    setName(event, lastName){
+      this.name = event.target.value + ' ' + lastName;
+
+    },
+
     add(num) {
       // data property 참조
       // this.counter = this.counter + 1;
