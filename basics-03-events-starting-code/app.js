@@ -5,13 +5,16 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    add() {
+    add(num) {
       // data property 참조
-      this.counter = this.counter + 1;
+      // this.counter = this.counter + 1;
+      this.counter = this.counter + num;
 
     },
-    reduce(){
-      this.counter = this.counter - 1;
+    reduce(num){
+      //this.counter = this.counter - 1;
+      this.counter = this.counter - num;
+      //this.counter --;
     }
   }
 });
