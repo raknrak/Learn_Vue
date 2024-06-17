@@ -8,6 +8,17 @@ const app = Vue.createApp({
     };
   },
   watch: {
+    // counter가 50을 초과하는 경우 0으롷 초기화
+    counter(value){
+     
+      if(value > 50){
+        const that = this;
+        setTimeout(function() {
+          that.counter = 0;
+        }, 2000);
+        
+      }
+    }
     /** name(value) { // name이 변경될 때마다 재실행
       console.log('Running again...1')
       //return
