@@ -20,8 +20,13 @@
       <h2>Events in Action</h2>
       <button v-on:click="add(5)">Add 5 </button>
       <button v-on:click="reduce(5)">Subtract 5</button>
+      <!-- 초깃값 고정 : v-once -->
+      <p v-once> Stating Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="setName($event, 'raknrak')" v-on:keyup.enter="confirmInput">
+      <input 
+      type="text" 
+      v-on:input="setName($event, 'raknrak')" 
+      v-on:keyup.enter="confirmInput">
       <p>Your Name : {{ confirmedName }} </p>
       <!-- <form v-on:submit="submitForm"> -->
       <form v-on:submit.prevent="submitForm">
