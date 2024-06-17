@@ -2,10 +2,19 @@ const app = Vue.createApp({
   data() {
     return {      
       counter: 0,
-      name: ''
+      name: '',
+      confirmedName: ''
     };
   },
   methods: {
+    confirmInput(){
+      this.confirmedName = this.name;
+    },
+    submitForm(){
+        // event.preventDefault(); // 버튼 클릭 후 새로고침 x -> v-on:submit.prevent
+        alert('Submitted!');
+      },
+
     setName(event, lastName){
       this.name = event.target.value + ' ' + lastName;
 
