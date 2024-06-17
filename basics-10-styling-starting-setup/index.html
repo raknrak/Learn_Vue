@@ -28,13 +28,14 @@
       @click="boxSelected('A')">
     </div>
 
-      <div class="demo" 
+      <div 
+      class="demo" 
       :class="boxBclasses"         
       @click="boxSelected('B')">
     </div>
-
-      <div class="demo" 
-      :class="boxCclasses"   
+<!-- 동적 클래스: 배열 구문 -->
+      <div       
+      :class="['demo',{ active: boxCselected }]"   
       @click="boxSelected('C')">
     </div>
     </section>

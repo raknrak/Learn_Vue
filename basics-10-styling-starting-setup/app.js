@@ -1,43 +1,36 @@
 const app = Vue.createApp({
+  data() {
+    return {
+      boxAselected: false,
+      boxBselected: false,
+      boxCselected: false,
+    };
+  },
 
-    data() {
-        return {
-            boxAselected: false,
-            boxBselected: false,
-            boxCselected: false
-        };
-
+  computed: {
+    boxAclasses() {
+      return { active: this.boxAselected };
     },
 
-    computed: {
-        boxAclasses(){
-            return { active: this.boxAselected };
-        },
-        
-        boxBclasses(){
-            return { active: this.boxBselected };
-        },
-
-        boxCclasses(){  
-            return { active: this.boxCselected };
-
-        }
+    boxBclasses() {
+      return { active: this.boxBselected };
     },
+  },
 
-    methods: {
-        boxSelected(box){
-            if(box ==='A'){
-                // this.boxAselected = true;                
-                this.boxAselected = !this.boxAselected;// 토글로 수정
-            } else if (box === 'B') {
-                //this.boxBselected = true;
-                this.boxBselected = !this.boxBselected;
-            } else if( box === 'C') {
-                //this.boxCselected = true;
-                this.boxCselected = !this.boxCselected;
-            }
-        }
+  methods: {
+    boxSelected(box) {
+      if (box === "A") {
+        // this.boxAselected = true;
+        this.boxAselected = !this.boxAselected; // 토글로 수정
+      } else if (box === "B") {
+        //this.boxBselected = true;
+        this.boxBselected = !this.boxBselected;
+      } else if (box === "C") {
+        //this.boxCselected = true;
+        this.boxCselected = !this.boxCselected;
+      }
     },
+  },
 });
 
 app.mount('#styling');
