@@ -24,17 +24,17 @@
       <!--  :class="boxAselected ? 'demo active' : 'demo' "  -->
       <div  
       class="demo"     
-      :class="{active: boxAselected}"       
+      :class="boxAclasses"       
       @click="boxSelected('A')">
     </div>
 
       <div class="demo" 
-      :class="{active: boxBselected}"         
+      :class="boxBclasses"         
       @click="boxSelected('B')">
     </div>
 
       <div class="demo" 
-      :class="{active: boxCselected}"   
+      :class="boxCclasses"   
       @click="boxSelected('C')">
     </div>
     </section>

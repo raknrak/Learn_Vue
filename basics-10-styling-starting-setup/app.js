@@ -1,6 +1,6 @@
 const app = Vue.createApp({
 
-    data (){
+    data() {
         return {
             boxAselected: false,
             boxBselected: false,
@@ -9,9 +9,20 @@ const app = Vue.createApp({
 
     },
 
-    // computed(){
+    computed: {
+        boxAclasses(){
+            return { active: this.boxAselected };
+        },
+        
+        boxBclasses(){
+            return { active: this.boxBselected };
+        },
 
-    // }, 
+        boxCclasses(){  
+            return { active: this.boxCselected };
+
+        }
+    },
 
     methods: {
         boxSelected(box){
