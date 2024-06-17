@@ -5,6 +5,16 @@ const app = Vue.createApp({
       name: ''
     };
   },
+  // 의존성이 변경되는 경우메만 running agian.
+  computed:{
+    fullname(){
+      console.log('Running again...')
+      if(this.name ===''){
+        return '';
+      }
+      return this.name + ' ' + 'raknrak';
+    }
+  },
   methods: {
     outputFullname(){
       console.log('Running again...')
