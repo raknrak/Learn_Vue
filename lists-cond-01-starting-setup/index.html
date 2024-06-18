@@ -22,7 +22,10 @@
       <input type="text" v-model="enteredGoalValue"/>
       <button @click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
-      <ul>
+      <!-- <ul v-if="goals.length > 0"> -->
+        <!-- v-else는 v-if가 잇는 요소의 바로 다음에 오는 요소에 써야함. -->
+      <!-- <ul v-else-if="goals.length > 0"> -->
+      <ul v-else>
         <li>Goal</li>
       </ul>
     </section>
