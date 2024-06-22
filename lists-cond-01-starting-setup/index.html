@@ -23,12 +23,13 @@
       <button @click="addGoal">Add Goal</button>
       <!-- v-if는 DOM에 추가 및 제거 , show는 css를 통해 숨기거나 표시 -->
        <!-- show를 사용하면 성능에 영향을 주지 않음. -->
-      <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <!-- <ul v-if="goals.length > 0"> -->
         <!-- v-else는 v-if가 잇는 요소의 바로 다음에 오는 요소에 써야함. -->
       <!-- <ul v-else-if="goals.length > 0"> -->
-      <ul v-show="goals.length > 0">
-        <li>Goal</li>
+      <ul v-else>
+        <!-- li 요소 밖은 접근 불가. -->
+        <li v-for="goal in goals">{{ goal }}</li>
       </ul>
     </section>
   </body>
